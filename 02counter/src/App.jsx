@@ -10,9 +10,16 @@ let [counter, setCounter] = useState(15) //using useState hook to create a state
    //let counter = 15
 
 const addValue = () => {
-  console.log('clicked', counter );   
+   
   counter = counter + 1
-  setCounter(counter)}
+  setCounter(counter)
+}
+
+const removeValue = () => {
+  console.log('clicked', counter );   
+  counter = counter - 1
+  setCounter(counter)
+}
   return (
     <>
       <h1>sushant and react</h1>
@@ -20,7 +27,8 @@ const addValue = () => {
 
       <button onClick={addValue}>Add Value{counter}</button>
       <br />
-      <button>Subtract Value{counter}</button>
+      <button onClick={removeValue}>
+        remove Value{counter}</button>
       <p>footer: {counter} </p>
     </>
   )
